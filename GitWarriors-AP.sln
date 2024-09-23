@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitWarriors-AP", "GitWarriors-AP\GitWarriors-AP.csproj", "{600433DA-6F8B-405A-B3F4-8A84894F6BD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{600433DA-6F8B-405A-B3F4-8A84894F6BD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{600433DA-6F8B-405A-B3F4-8A84894F6BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{600433DA-6F8B-405A-B3F4-8A84894F6BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{600433DA-6F8B-405A-B3F4-8A84894F6BD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0893E004-BF69-476B-92A2-0AC1CC889326}
+	EndGlobalSection
+EndGlobal
