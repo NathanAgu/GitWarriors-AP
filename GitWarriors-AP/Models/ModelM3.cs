@@ -11,5 +11,10 @@ namespace GitWarriors_AP.Models
         private static GitwarriorsContext modelProjetM3;
 
         public static GitwarriorsContext ModelProjetM3 { get => modelProjetM3; set => modelProjetM3 = value; }
+
+        public static void init()
+        {
+            ModelM3 modelProjetM3 = new ModelM3();
+        }
     }
 }

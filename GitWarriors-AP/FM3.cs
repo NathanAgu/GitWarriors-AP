@@ -16,5 +16,10 @@ namespace GitWarriors_AP
         {
             InitializeComponent();
         }
+
+        private void FM3_Load(object sender, EventArgs e)
+        {
+        }
+
     }
 }
