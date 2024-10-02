@@ -9,12 +9,25 @@ namespace GitWarriors_AP.Models
     internal class ModelM3
     {
         private static GitwarriorsContext modelProjetM3;
+        public static Visiteur currentVisiteur;
+        public static int statutAjoutModif = 0; // si AJout = 1 sinon Modif = 2
+        public static Fichefrai currentFicheFrai;
 
         public static GitwarriorsContext ModelProjetM3 { get => modelProjetM3; set => modelProjetM3 = value; }
 
         public static void init()
         {
-            ModelM3 modelProjetM3 = new ModelM3();
+            ModelProjetM3 = new GitwarriorsContext();
+        }
+
+        public static List<Visiteur> listeVisiteur()
+        {
+            return ModelProjetM3.Visiteurs.ToList();
+        }
+
+        public static Visiteur setCurrentVisiteur()
+        {
+            return currentVisiteur = listeVisiteur()[0];
         }
     }
 }

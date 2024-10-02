@@ -30,14 +30,14 @@
         {
             components = new System.ComponentModel.Container();
             labelTitle = new Label();
-            dataGridView1 = new DataGridView();
+            dgvFichesFrais = new DataGridView();
             btnAjout = new Button();
             btnModif = new Button();
             btnSuppr = new Button();
             bsEtat = new BindingSource(components);
             bsFicheFrais = new BindingSource(components);
             btnFiltres = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvFichesFrais).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsEtat).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bsFicheFrais).BeginInit();
             SuspendLayout();
@@ -51,13 +51,14 @@
             labelTitle.TabIndex = 3;
             labelTitle.Text = "Fiches de frais :";
             // 
-            // dataGridView1
+            // dgvFichesFrais
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 51);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(776, 352);
-            dataGridView1.TabIndex = 4;
+            dgvFichesFrais.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvFichesFrais.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvFichesFrais.Location = new Point(12, 51);
+            dgvFichesFrais.Name = "dgvFichesFrais";
+            dgvFichesFrais.Size = new Size(776, 352);
+            dgvFichesFrais.TabIndex = 4;
             // 
             // btnAjout
             // 
@@ -67,6 +68,7 @@
             btnAjout.TabIndex = 5;
             btnAjout.Text = "Ajouter";
             btnAjout.UseVisualStyleBackColor = true;
+            btnAjout.Click += btnAjout_Click;
             // 
             // btnModif
             // 
@@ -76,6 +78,7 @@
             btnModif.TabIndex = 6;
             btnModif.Text = "Modifier";
             btnModif.UseVisualStyleBackColor = true;
+            btnModif.Click += btnModif_Click;
             // 
             // btnSuppr
             // 
@@ -105,12 +108,12 @@
             Controls.Add(btnSuppr);
             Controls.Add(btnModif);
             Controls.Add(btnAjout);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvFichesFrais);
             Controls.Add(labelTitle);
             Name = "FM3";
             Text = "FM3";
             Load += FM3_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvFichesFrais).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsEtat).EndInit();
             ((System.ComponentModel.ISupportInitialize)bsFicheFrais).EndInit();
             ResumeLayout(false);
@@ -118,7 +121,7 @@
 
         #endregion
         private Label labelTitle;
-        private DataGridView dataGridView1;
+        private DataGridView dgvFichesFrais;
         private Button btnAjout;
         private Button btnModif;
         private Button btnSuppr;
