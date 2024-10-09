@@ -75,16 +75,24 @@ namespace GitWarriors_AP.Models
             }
             else
             {
-                NbrEssaieConnexion ++;
-                msgErreur += "\n\nVous avez échoué " + NbrEssaieConnexion + " fois.";
-                if (NbrEssaieConnexion == 3)
+                if (visiteur.NbEssai != 3)
                 {
-                    visiteur.Actif = false;
-                    msgErreur += "\nCompte désactivé, contactez un administrateur !";
+                    NbrEssaieConnexion ++;
+                    msgErreur += "\n\nVous avez échoué " + NbrEssaieConnexion + " fois.";
+                    if (NbrEssaieConnexion == 3)
+                    {
+                        visiteur.Actif = false;
+                        msgErreur += "\nCompte désactivé, contactez un administrateur !";
+                    }
+                    MessageBox.Show(msgErreur);
                 }
-                MessageBox.Show(msgErreur);
+                else
+                {
+                    MessageBox.Show("Compte désactivé, contactez un administrateur !");
+                }
+                
             }
-            if (nbrEssaieConnexion == 4)
+            if (visiteur.NbEssai <= 3)
             {
                 visiteur.NbEssai = NbrEssaieConnexion;
             }
