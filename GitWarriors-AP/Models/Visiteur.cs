@@ -25,6 +25,10 @@ public partial class Visiteur
 
     public string Password { get; set; } = null!;
 
+    public int NbEssai { get; set; }
+
+    public bool Actif { get; set; }
+
     public virtual ICollection<Fichefrai> Fichefrais { get; set; } = new List<Fichefrai>();
 
     public virtual Laboratoire IdLaboNavigation { get; set; } = null!;

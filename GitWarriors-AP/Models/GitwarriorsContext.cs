@@ -471,6 +471,7 @@ public partial class GitwarriorsContext : DbContext
                 .IsUnicode(false)
                 .IsFixedLength()
                 .HasColumnName("idVisiteur");
+            entity.Property(e => e.Actif).HasColumnName("actif");
             entity.Property(e => e.Cp)
                 .HasMaxLength(5)
                 .IsUnicode(false)
@@ -486,6 +487,7 @@ public partial class GitwarriorsContext : DbContext
                 .HasMaxLength(16)
                 .IsUnicode(false)
                 .HasColumnName("identifiant");
+            entity.Property(e => e.NbEssai).HasColumnName("nbEssai");
             entity.Property(e => e.Nom)
                 .HasMaxLength(32)
                 .IsUnicode(false)

@@ -1,3 +1,5 @@
+using GitWarriors_AP.Models;
+
 namespace GitWarriors_AP
 {
     internal static class Program
@@ -11,7 +13,8 @@ namespace GitWarriors_AP
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FMenu());
+            ModelM1.init();
+            Application.Run(new FConnexion());
         }
     }
 }
