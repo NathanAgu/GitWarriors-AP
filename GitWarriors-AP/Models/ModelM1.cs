@@ -84,6 +84,10 @@ namespace GitWarriors_AP.Models
                 }
                 MessageBox.Show(msgErreur);
             }
+            if (nbrEssaieConnexion != 4)
+            {
+                visiteur.NbEssai = NbrEssaieConnexion;
+            }
             visiteurConnecte = visiteur;
 
             modelProjetM1.SaveChanges();
