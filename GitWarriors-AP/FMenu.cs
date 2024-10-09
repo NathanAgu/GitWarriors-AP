@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GitWarriors_AP.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace GitWarriors_AP
         public FMenu()
         {
             InitializeComponent();
+        }
+
+        private void FMenu_Load(object sender, EventArgs e)
+        {
+            if (ModelM1.VisiteurConnecte.Actif && ModelM1.VisiteurConnecte.NbEssai == 4)
+            {
+                FUpdatePassword fUpdatePassword = new FUpdatePassword();
+                fUpdatePassword.ShowDialog();
+            }
         }
     }
 }

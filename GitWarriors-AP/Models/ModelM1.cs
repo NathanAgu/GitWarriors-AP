@@ -32,6 +32,13 @@ namespace GitWarriors_AP.Models
             return sb.ToString();
         }
 
+        public static void setPassword(string password)
+        {
+            visiteurConnecte.Password = getMd5Hash(password);
+            visiteurConnecte.NbEssai = nbrEssaieConnexion;
+            modelProjetM1.SaveChanges();
+        }
+
         public static void validationConnexion(string identifiant, string motDePasse)
         {
             string msgErreur = "Erreur(s) :";
@@ -41,16 +48,21 @@ namespace GitWarriors_AP.Models
             if (modelProjetM1.Visiteurs.Where(x => x.Identifiant == identifiant).ToList().Count == 1)
             {
                 visiteur = modelProjetM1.Visiteurs.Where(x => x.Identifiant == identifiant).ToList()[0];
+                NbrEssaieConnexion = visiteur.NbEssai;
 
-                if (visiteur.Password.Equals(getMd5Hash(motDePasse)))
+                if (visiteur.Actif && NbrEssaieConnexion != 3)
                 {
-                    connexion = true;
-                    NbrEssaieConnexion = 0;
+                    if (visiteur.Password.Equals(getMd5Hash(motDePasse)))
+                    {
+                        connexion = true;
+                        NbrEssaieConnexion = 0;
+                    }
+                    else
+                    {
+                        msgErreur += "\n - Identifiant ou mot de passe invalide !";
+                    }
                 }
-                else
-                {
-                    msgErreur += "\n - Identifiant ou mot de passe invalide !";
-                }
+                
             }
             else
             {
@@ -60,7 +72,6 @@ namespace GitWarriors_AP.Models
             if (connexion)
             {
                 connexionValide = connexion;
-                visiteurConnecte = visiteur;
             }
             else
             {
@@ -68,10 +79,12 @@ namespace GitWarriors_AP.Models
                 msgErreur += "\n\nVous avez échoué " + NbrEssaieConnexion + " fois.";
                 if (NbrEssaieConnexion == 3)
                 {
+                    visiteur.Actif = false;
                     msgErreur += "\nCompte désactivé, contactez un administrateur !";
                 }
                 MessageBox.Show(msgErreur);
             }
+            visiteurConnecte = visiteur;
 
             modelProjetM1.SaveChanges();
         }

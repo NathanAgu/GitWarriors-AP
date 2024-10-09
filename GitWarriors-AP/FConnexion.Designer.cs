@@ -89,6 +89,7 @@
             Controls.Add(txtIdentifiant);
             Name = "FConnexion";
             Text = "FConnexion";
+            Load += FConnexion_Load;
             ResumeLayout(false);
             PerformLayout();
         }

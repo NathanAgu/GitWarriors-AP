@@ -42,5 +42,10 @@ namespace GitWarriors_AP
         {
             Application.Run(new FMenu());
         }
+
+        private void FConnexion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
