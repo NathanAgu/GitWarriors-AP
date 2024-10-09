@@ -38,7 +38,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(232, 82);
+            label1.Location = new Point(34, 27);
             label1.Name = "label1";
             label1.Size = new Size(77, 15);
             label1.TabIndex = 0;
@@ -47,7 +47,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(232, 111);
+            label2.Location = new Point(34, 56);
             label2.Name = "label2";
             label2.Size = new Size(78, 15);
             label2.TabIndex = 1;
@@ -55,21 +55,21 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(315, 79);
+            txtPassword.Location = new Point(117, 24);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(100, 23);
             txtPassword.TabIndex = 2;
             // 
             // txtConfPassword
             // 
-            txtConfPassword.Location = new Point(315, 108);
+            txtConfPassword.Location = new Point(117, 53);
             txtConfPassword.Name = "txtConfPassword";
             txtConfPassword.Size = new Size(100, 23);
             txtConfPassword.TabIndex = 3;
             // 
             // button1
             // 
-            button1.Location = new Point(315, 137);
+            button1.Location = new Point(117, 82);
             button1.Name = "button1";
             button1.Size = new Size(100, 23);
             button1.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(256, 134);
             Controls.Add(button1);
             Controls.Add(txtConfPassword);
             Controls.Add(txtPassword);

@@ -37,14 +37,14 @@
             // 
             // txtIdentifiant
             // 
-            txtIdentifiant.Location = new Point(210, 50);
+            txtIdentifiant.Location = new Point(121, 34);
             txtIdentifiant.Name = "txtIdentifiant";
             txtIdentifiant.Size = new Size(100, 23);
             txtIdentifiant.TabIndex = 0;
             // 
             // txtMotDePasse
             // 
-            txtMotDePasse.Location = new Point(210, 79);
+            txtMotDePasse.Location = new Point(121, 63);
             txtMotDePasse.Name = "txtMotDePasse";
             txtMotDePasse.Size = new Size(100, 23);
             txtMotDePasse.TabIndex = 1;
@@ -52,7 +52,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(127, 53);
+            label1.Location = new Point(38, 37);
             label1.Name = "label1";
             label1.Size = new Size(61, 15);
             label1.TabIndex = 2;
@@ -61,7 +61,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(127, 82);
+            label2.Location = new Point(38, 66);
             label2.Name = "label2";
             label2.Size = new Size(77, 15);
             label2.TabIndex = 3;
@@ -69,7 +69,7 @@
             // 
             // btnConnexion
             // 
-            btnConnexion.Location = new Point(210, 108);
+            btnConnexion.Location = new Point(121, 92);
             btnConnexion.Name = "btnConnexion";
             btnConnexion.Size = new Size(100, 23);
             btnConnexion.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(292, 143);
             Controls.Add(btnConnexion);
             Controls.Add(label2);
             Controls.Add(label1);
